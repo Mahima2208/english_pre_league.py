@@ -1,0 +1,183 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "scatter_matrix",
+        "importPath": "pandas.plotting",
+        "description": "pandas.plotting",
+        "isExtraImport": true,
+        "detail": "pandas.plotting",
+        "documentation": {}
+    },
+    {
+        "label": "scipy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "scipy",
+        "description": "scipy",
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "DataProcessser",
+        "importPath": "processing",
+        "description": "processing",
+        "isExtraImport": true,
+        "detail": "processing",
+        "documentation": {}
+    },
+    {
+        "label": "DataProcessser",
+        "importPath": "processing",
+        "description": "processing",
+        "isExtraImport": true,
+        "detail": "processing",
+        "documentation": {}
+    },
+    {
+        "label": "EPLSoccerRegression",
+        "importPath": "reg_model",
+        "description": "reg_model",
+        "isExtraImport": true,
+        "detail": "reg_model",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "statsmodels.api",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "statsmodels.api",
+        "description": "statsmodels.api",
+        "detail": "statsmodels.api",
+        "documentation": {}
+    },
+    {
+        "label": "DataAnalyzer",
+        "kind": 6,
+        "importPath": "src.analyze",
+        "description": "src.analyze",
+        "peekOfCode": "class DataAnalyzer:\n    def __init__(self, data):\n        self.data = data\n    def run_analysis(self):\n        descriptive_stats = self.descriptive_stats()\n        correlation = self.correlation(visualize=True)\n        covariance = self.covariance(visualize=True)\n        self.pairplot_of_vars()\n        return descriptive_stats, correlation, covariance\n    def descriptive_stats(self):",
+        "detail": "src.analyze",
+        "documentation": {}
+    },
+    {
+        "label": "TTest",
+        "kind": 6,
+        "importPath": "src.hypothesis_testing",
+        "description": "src.hypothesis_testing",
+        "peekOfCode": "class TTest:\n    def __init__(self, model):\n        self.model = model\n        self.coefs = model.params\n        self.pvalues = model.pvalues\n        self.alpha = 0.05\n    def test(self):\n        for i, pvalue in enumerate(self.pvalues):\n            if pvalue > self.alpha:\n                print(",
+        "detail": "src.hypothesis_testing",
+        "documentation": {}
+    },
+    {
+        "label": "DataProcessser",
+        "kind": 6,
+        "importPath": "src.processing",
+        "description": "src.processing",
+        "peekOfCode": "class DataProcessser:\n    def __init__(self, data):\n        self.data = data\n    def run_processing(\n        self,\n        categorical_variables: list,\n        independent_feature: str,\n        target: str,\n        test_size: float = 0.2,\n    ):",
+        "detail": "src.processing",
+        "documentation": {}
+    },
+    {
+        "label": "EPLSoccerRegression",
+        "kind": 6,
+        "importPath": "src.reg_model",
+        "description": "src.reg_model",
+        "peekOfCode": "class EPLSoccerRegression:\n    def __init__(self, X_train, X_test, y_train, y_test):\n        self.X_train = X_train\n        self.X_test = X_test\n        self.y_train = y_train\n        self.y_test = y_test\n    def fit_regression(self):\n        X_train = sm.add_constant(self.X_train)\n        model = sm.OLS(self.y_train, X_train).fit()\n        return model",
+        "detail": "src.reg_model",
+        "documentation": {}
+    },
+    {
+        "label": "EPLSoccerAssumptionsTest",
+        "kind": 6,
+        "importPath": "src.reg_model",
+        "description": "src.reg_model",
+        "peekOfCode": "class EPLSoccerAssumptionsTest:\n    def __init__(self, model, X, y):\n        self.model = model\n        self.X = X\n        self.y = y\n    def linearity_using_visual_inspection(self):\n        \"\"\"\n        Tests the linearity assumption by calculating the residuals and\n        plotting them against the predictor variables. If the relationship\n        between the predictor variables and the residuals is linear, then",
+        "detail": "src.reg_model",
+        "documentation": {}
+    },
+    {
+        "label": "EPLSoccerPredict",
+        "kind": 6,
+        "importPath": "src.reg_model",
+        "description": "src.reg_model",
+        "peekOfCode": "class EPLSoccerPredict:\n    def __init__(self, model, X, y) -> None:\n        self.model = model\n        self.X = X\n        self.y = y\n    def predict(self):\n        X_pred = sm.add_constant(self.X)\n        y_pred = self.model.predict(X_pred)\n        return y_pred\n    def plot_lr(self):",
+        "detail": "src.reg_model",
+        "documentation": {}
+    },
+    {
+        "label": "transform_predictors",
+        "kind": 2,
+        "importPath": "src.reg_model",
+        "description": "src.reg_model",
+        "peekOfCode": "def transform_predictors(X, transformation):\n    \"\"\"\n    Transforms the predictor variables in the input array X using the specified\n    transformation function.\n    \"\"\"\n    # Check if the transformation function is valid\n    if transformation not in [\"log\", \"sqrt\", \"square\"]:\n        raise ValueError(\"Invalid transformation function.\")\n    # Apply the transformation to each column of the input array\n    if transformation == \"log\":",
+        "detail": "src.reg_model",
+        "documentation": {}
+    }
+]
